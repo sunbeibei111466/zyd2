@@ -76,9 +76,7 @@ public class DebtMatterManagmentFragment extends BaseFragment implements HttpMes
         titile = (TextView) view.findViewById(R.id.tv_title_name);
         titile.setText("债事管理");
         titleleft = (ImageView) view.findViewById(R.id.iv_title_left);
-        titleleft.setVisibility(View.VISIBLE);
-        titleleft.setImageResource(R.mipmap.search_bar);
-        titleleft.setOnClickListener(this);
+
 
         image_right = (ImageView) view.findViewById(R.id.iv_title_right);
         image_right.setVisibility(View.VISIBLE);
@@ -239,6 +237,15 @@ public class DebtMatterManagmentFragment extends BaseFragment implements HttpMes
             if (userType != null) {
                 DismissDialog();
                 if (userType.getState().equals("ok")) {
+                    int userType1 = userType.getData().getUserType();
+                    if (userType1==1){
+                        titleleft.setVisibility(View.VISIBLE);
+                        titleleft.setImageResource(R.mipmap.search_bar);
+                        titleleft.setOnClickListener(this);
+                    }else{
+                        titleleft.setClickable(false);
+                        titleleft.setVisibility(View.GONE);
+                    }
                     //更新用户身份状态
                     UserInfoState.setUserType(userType.getData().getUserType());
                 }
