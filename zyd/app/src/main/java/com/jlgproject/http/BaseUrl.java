@@ -10,8 +10,8 @@ public class BaseUrl {
 
     //主机地址
 //    public final static  String MAIN="http://192.168.2.11:8056/";
-  // public final static String MAIN = "http://api.zhongjinzhaishi.com/";
-    public  final  static  String MAIN="http://test.api.zhongjinzhaishi.com/";
+   public final static String MAIN = "http://api.zhongjinzhaishi.com/";
+   // public  final  static  String MAIN="http://test.api.zhongjinzhaishi.com/";
 
     public final static String USER_TYPE = MAIN + "/api/provide";
     // 登录
